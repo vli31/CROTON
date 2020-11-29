@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class='wrap'>
+    <h1>CROTON</h1>
+    <p class='word-break'>
+        Please input a 79-nucleotide target sequence:
+        (ex.&nbsp;TCAGCACCGACCCGCAGGTCACGAGCTCCGCACCGGTCTTGGCGGCACCACCGCCCGGCAGGCAGGGCTCCCCATGTGC)
+    </p>
+
+    <!-- SeqForm -->
+    <form action='' method="post" autocomplete="off" novalidate="novalidate"> 
+        {% csrf_token %}
+        
+        {% if form.input_seq.errors %}
+            {% for error in form.input_seq.errors %}
+                <p> <span class="error"> {{ error }} </span> <br> </p>
+            {% endfor %}
+        {% endif %}
+
+        <div> {{ form.input_seq }} </div>
+        
+        <input type="submit" value="Predict">
+    </form>
+
+    <!-- Output -->
+    <p class='word-break'> <br>
+        <u>Input:</u> <br>
+            {{ input_seq }} <br> <br>
+        <u>Output:</u> <br>
+            - 1bp Insertion Probability:  {{ 1bp_pred }} <br>
+            - Deletion Frequency:  {{ delfreq_pred }} 
+    </p>
+</div>
+{% endblock content %}
