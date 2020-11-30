@@ -9,9 +9,9 @@ def validate_base(input_seq):
             "Error: The input should only contain A, T, C, and G"
         ))
     
-    if len(input_seq) != 79:
+    if len(input_seq) != 60:
         errors.append(ValidationError(
-            "Error: The input has %i (not 79) characters" % (len(input_seq))
+            "Error: The input has %i (not 60) characters" % (len(input_seq))
         ))
 
     if errors:
