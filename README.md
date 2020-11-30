@@ -22,11 +22,9 @@ conda activate croton
 ## Setting up django 
 To set up django make sure you are in the directory 'CROTON' and have activated the microenvironment 'croton', then run:
 ```
-python manage.py makemigrations app
-python manage.py migrate
 python manage.py runserver
 ```
-Now CROTON should be avilable at the local host: 
+Now CROTON should be avilable at the local host: http://127.0.0.1:8000/
 
 ## Contact
 If you encounter an issues or would like to give any feedback, feel free to leave a [GitHub issue](https://github.com/vli31/CROTON/issues).
