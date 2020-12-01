@@ -1,6 +1,6 @@
-# CROTON
 <a id='sec0'></a>
-Please follow these instructions to host CROTON on your local computer. Reference this link for more information about CROTON and its capabilities: [Link to Paper]()
+# CROTON
+Please follow these instructions to host CROTON on your local computer. Reference this link for more information about CROTON and its capabilities: [Link to Paper](https://drive.google.com/file/d/1xcU5mvpoR6-Nj3Tkat7xqHFuJ_oHcWw9/view?usp=sharing)
 
 ### Get the latest code
 Clone the Github Repository. If you have a previous version, make sure to pull the latest commits:
@@ -20,7 +20,7 @@ conda env create -f croton.yml
 conda activate croton
 ```
 
-## Setting up django 
+## Setting up Django 
 To set up django make sure you are in the directory 'CROTON' and have activated the microenvironment 'croton', then run:
 ```
 python manage.py runserver
