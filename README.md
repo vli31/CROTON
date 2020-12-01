@@ -28,9 +28,9 @@ python manage.py runserver
 Now CROTON should be avilable at the local host: http://127.0.0.1:8000/
 
 The CROTON web interface should look like this:
-<br /> 
-<img align="left" src="https://github.com/vli31/CROTON/blob/main/croton_screenshot.png">
-<br /> 
+
+<img pull-left src="croton_screenshot.png">
+
 ## Contact
 If you encounter an issues or would like to give any feedback, feel free to leave a [GitHub issue](https://github.com/vli31/CROTON/issues).
 
