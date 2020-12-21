@@ -1,6 +1,6 @@
 <a id='sec0'></a>
 # CROTON
-Please follow these instructions to host CROTON on your local computer. Reference this link for more information about CROTON and its capabilities: [Link to Paper](https://drive.google.com/file/d/1xcU5mvpoR6-Nj3Tkat7xqHFuJ_oHcWw9/view?usp=sharing)
+Please follow these instructions to host CROTON on your local computer. Reference this link for more information about CROTON and its capabilities: [Link to Paper](https://drive.google.com/file/d/15eP01jxLilJnERmMnDkwn7kYkOKwOs-I/view?usp=sharing)
 
 ### Get the latest code
 Clone the Github Repository. If you have a previous version, make sure to pull the latest commits:
