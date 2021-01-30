@@ -27,8 +27,12 @@
         <u>Input:</u> <br>
             {{ input_seq }} <br> <br>
         <u>Output:</u> <br>
-            - 1 bp Insertion Probability:  {{ 1bp_pred }} <br>
-            - Deletion Frequency:  {{ delfreq_pred }} 
+            - 1 bp Insertion Probability: {{ prob_1bpins }} <br>
+            - 1 bp Deletion Probability: {{ prob_1bpdel }} <br>
+            - Deletion Frequency: {{ delfreq }} <br>
+            - 1 bp Frameshift Frequency: {{ onemod3_freq }} <br>
+            - 2 bp Frameshift Frequency: {{ twomod3_freq }} <br>
+            - Frameshift Frequency: {{ frameshift_freq }} 
     </p>
 </div>
 {% endblock content %}

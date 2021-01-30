@@ -1,6 +1,6 @@
 <a id='sec0'></a>
 # CROTON
-Please follow these instructions to host CROTON on your local computer. Reference this link for more information about CROTON and its capabilities: [Link to Paper](https://drive.google.com/file/d/15eP01jxLilJnERmMnDkwn7kYkOKwOs-I/view?usp=sharing)
+Please follow the following instructions to host CROTON on your local computer. CROTON is an automated and variant-aware framework built on deep multi-task convolutional neural networks. CROTON predicts the following CRISPR/Cas9 editing outcome statistics: (1) 1 bp insertion frequency, (2) 1 bp deletion frequency, (3) deletion frequency, (4) 1 bp frameshift frequency, (5) 2 bp frameshift frequency, and (6) total frameshift frequency.
 
 ### Get the latest code
 Clone the Github Repository. If you have a previous version, make sure to pull the latest commits:
@@ -21,13 +21,13 @@ conda activate croton
 ```
 
 ## Setting up Django 
-To set up django make sure you are in the directory 'CROTON' and have activated the microenvironment 'croton', then run:
+To set up Django make sure you are in the directory 'CROTON' and have activated the microenvironment 'croton', then run:
 ```
 python manage.py runserver
 ```
-Now CROTON should be avilable at a local host like http://127.0.0.1:8000/
+Now, CROTON should be available at a local server like http://127.0.0.1:8000/.
 
-The CROTON web interface should look like this:
+The CROTON web interface looks like this:
 
 <img pull-left src="croton_screenshot.png">
 
