@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import SeqForm
 
 import numpy as np
+import tensorflow as tf
 from tensorflow.keras.models import load_model
 
 def one_hot_encode(seq, base_map):
@@ -11,7 +12,6 @@ def one_hot_encode(seq, base_map):
     return np.eye(4)[seq2]
 
 # Create your views here.
-model = load_model('models/CROTON.h5') #load multitask model
 
 def get_input_view(request):
     if request.method == 'POST':
@@ -21,8 +21,9 @@ def get_input_view(request):
             input_seq = form['input_seq'].value()
             input_seq = one_hot_encode(input_seq, 'ACGT')
             input_seq = np.reshape(input_seq, (1, 60, 4))
-            
+            model = load_model('models/CROTON.h5') #load multitask model
             pred = model.predict(input_seq)
+            
             delfreq = pred[:,0].flatten().tolist()[0] * 100
             prob_1bpins = pred[:,1].flatten().tolist()[0] * 100
             prob_1bpdel = pred[:,2].flatten().tolist()[0] * 100
@@ -47,7 +48,7 @@ def get_input_view(request):
                 'twomod3_freq': twomod3_freq, 
                 'frameshift_freq': frameshift_freq,
             }
-    
+
     else: # if GET (or any other method), create a blank form
         context = {'form': SeqForm()}
     
